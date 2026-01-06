@@ -221,3 +221,58 @@ label[for="switch6"] {
     background-color: #008542;
     border-color: #008542;
 }
+
+tooltip-header {
+    position: relative;
+    cursor: help;
+    user-select: none;
+}
+
+.tooltip-box {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    z-index: 9999;
+
+    min-width: 240px;
+    max-width: 320px;
+
+    background-color: #ffffff;
+    color: #000000;
+
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+
+    padding: 8px 10px;
+    font-size: 0.82rem;
+    line-height: 1.3;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease-in-out;
+    pointer-events: none;
+}
+
+/* seta estilo Excel */
+.tooltip-box::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 16px;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: #ffffff;
+    border-left: 1px solid #cfcfcf;
+    border-top: 1px solid #cfcfcf;
+
+    transform: rotate(45deg);
+}
+
+.tooltip-header:hover .tooltip-box {
+    opacity: 1;
+    visibility: visible;
+}

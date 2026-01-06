@@ -179,9 +179,9 @@ for path_origin in files_reduzida:
             df_reduzido[col] = df_reduzido[col].apply(sap_str_para_float)
 
     # --- Criar coluna "Estrangeiro $" logo após "Valor/moeda ACC" ---
-    if "Valor cont local R$" in df_reduzido.columns and "Valor/moeda ACC" in df_reduzido.columns:
-        idx_acc = df_reduzido.columns.get_loc("Valor/moeda ACC") + 1
-        df_reduzido.insert(idx_acc, "Estrangeiro $", df_reduzido["Valor cont local R$"] - df_reduzido["Valor/moeda ACC"])
+    if "Val suj cont loc R$" in df_reduzido.columns and "Valor cont local R$" in df_reduzido.columns:
+        idx_acc = df_reduzido.columns.get_loc("Valor cont local R$") + 1
+        df_reduzido.insert(idx_acc, "Estrangeiro $", df_reduzido["Val suj cont loc R$"] - df_reduzido["Valor cont local R$"])
 
     # --- Função de formatação brasileira ---
     def formata_brasileiro(x):

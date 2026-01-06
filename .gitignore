@@ -5,3 +5,7 @@ draft.txt
 draft.js
 auto_cl.log*
 files_aux
+backend/data/
+backend/data/jobs/
+backend/data/jobs/*.json
+backend/data/requests_*.json
