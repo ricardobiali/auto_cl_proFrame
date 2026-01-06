@@ -1,9 +1,4 @@
-dist
-draft.py
-draft.html
-draft.txt
-draft.js
-auto_cl.log*
+backend/app_log.log*
 files_aux
 backend/data/
 backend/data/jobs/

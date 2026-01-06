@@ -17,6 +17,11 @@ from jobs.services.state import JobState
 from jobs.services.file_io import save_json_atomic
 from jobs.job_store import save_job_state
 
+import logging
+log = logging.getLogger(__name__)
+
+log.info("Job %s iniciado")
+log.exception("Falha no job %s")
 
 # =========================
 # Job runtime (in-memory)

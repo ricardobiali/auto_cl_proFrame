@@ -1,8 +1,10 @@
+# backend/core/views.py
 from __future__ import annotations
 
 import csv
-import os
 import getpass
+import os
+import time
 from pathlib import Path
 from typing import Optional, Tuple
 
@@ -16,7 +18,7 @@ def _core_root() -> Path:
 
 def _read_user_from_csv(login: str, csv_path: Path) -> Tuple[Optional[str], Optional[str]]:
     """
-    CSV no formato:
+    CSV no formato (delimiter ';'):
       chave;gender;nome
       u33v;m;Ricardo Biali
     """
@@ -28,7 +30,6 @@ def _read_user_from_csv(login: str, csv_path: Path) -> Tuple[Optional[str], Opti
     # utf-8-sig: aguenta BOM do Excel
     with csv_path.open("r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f, delimiter=";")
-
         for row in reader:
             chave = (row.get("chave") or "").strip().lower()
             if chave != login_norm:
@@ -47,15 +48,19 @@ def _read_user_from_csv(login: str, csv_path: Path) -> Tuple[Optional[str], Opti
     return None, None
 
 
-@require_GET
-def welcome(request):
-    login = (
+def _resolve_login(request) -> str:
+    return (
         request.GET.get("login")
         or os.environ.get("USERNAME")
         or os.environ.get("USER")
         or getpass.getuser()
         or ""
     ).strip()
+
+
+@require_GET
+def welcome(request):
+    login = _resolve_login(request)
 
     csv_path = _core_root() / "user_data.csv"
     name, gender = _read_user_from_csv(login, csv_path)
@@ -65,4 +70,21 @@ def welcome(request):
     if gender not in ("m", "f"):
         gender = "m"
 
-    return JsonResponse({"ok": True, "login": login, "name": name, "gender": gender})
+    # você monta a frase no React, mas se quiser já mandar pronta:
+    greeting = ("Seja bem-vinda" if gender == "f" else "Seja bem-vindo") + f", {name}!"
+
+    return JsonResponse(
+        {"ok": True, "login": login, "name": name, "gender": gender, "greeting": greeting}
+    )
+
+
+@require_GET
+def health(_request):
+    # simples e confiável pro Tauri aguardar
+    return JsonResponse(
+        {
+            "ok": True,
+            "service": "backend",
+            "ts": time.time(),
+        }
+    )

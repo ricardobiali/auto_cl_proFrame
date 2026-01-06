@@ -10,6 +10,12 @@ from .file_io import load_json, save_json_atomic, ensure_destino_list, set_statu
 from .subprocess_runner import build_python_cmd, run_capture, spawn_stream
 from .state import JobState
 
+import logging
+log = logging.getLogger(__name__)
+
+log.info("Job iniciado")
+log.exception("Falha no job %s")
+
 class JobRunner:
     """
     Orquestra: SAP -> COMPLETA -> REDUZIDA

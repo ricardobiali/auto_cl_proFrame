@@ -1,4 +1,4 @@
-# app/hook_logging.py
+# app/logging.py
 from __future__ import annotations
 
 import logging
@@ -7,14 +7,14 @@ import sys
 import threading
 from pathlib import Path
 
-from app.paths import Paths
+from .paths import Paths
 
 
 def _choose_log_file() -> Path:
     """
     Prioridade:
-    1) Pasta do executável (raiz do app) -> auto_cl.log
-    2) Fallback: AppData\\AUTO_CL\\logs\\auto_cl.log
+    1) Pasta do executável (raiz do app) -> app_log.log
+    2) Fallback: AppData\\AUTO_CL\\logs\\app_log.log
     """
     # 1) raiz do app (onde está o .exe)
     if getattr(sys, "frozen", False):
@@ -23,7 +23,7 @@ def _choose_log_file() -> Path:
         # em dev, usa raiz do projeto (ajuste se preferir outro local)
         app_root = Path(__file__).resolve().parents[1]
 
-    preferred = app_root / "auto_cl.log"
+    preferred = app_root / "app_log.log"
 
     # testa se consegue criar/append
     try:
@@ -34,7 +34,7 @@ def _choose_log_file() -> Path:
     except Exception:
         # 2) fallback AppData
         P = Paths.build()
-        fallback = P.logs / "auto_cl.log"
+        fallback = P.logs / "app_log.log"
         fallback.parent.mkdir(parents=True, exist_ok=True)
         return fallback
 
@@ -42,8 +42,8 @@ def _choose_log_file() -> Path:
 def setup_logging(level: int = logging.INFO) -> None:
     """
     Logging robusto:
-    - Preferência: arquivo na raiz do app (auto_cl.log ao lado do .exe)
-    - Fallback: AppData\\...\\logs\\auto_cl.log se não tiver permissão
+    - Preferência: arquivo na raiz do app (app_log.log ao lado do .exe)
+    - Fallback: AppData\\...\\logs\\app_log.log se não tiver permissão
     - rotação (2MB, 5 backups)
     - thread excepthook
     """
