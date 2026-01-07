@@ -13,37 +13,3 @@ $env:PATH = "$nodeHome;$env:PATH"
 node -v
 npm -v
 npx -v
-
-(venv) PS C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\frontend> & "$nodeHome\node.exe" "$nodeHome\node_modules\npm\bin\npx-cli.js" tauri init
-node:internal/modules/cjs/loader:1210
-  throw err;
-  ^
-
-Error: Cannot find module 'nopt'
-Require stack:
-- C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\tools\node\node-v20.19.6-win-x64\node_modules\npm\node_modules\@npmcli\config\lib\type-defs.js
-- C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\tools\node\node-v20.19.6-win-x64\node_modules\npm\node_modules\@npmcli\config\lib\definitions\definition.js
-- C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\tools\node\node-v20.19.6-win-x64\node_modules\npm\node_modules\@npmcli\config\lib\definitions\definitions.js
-- C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\tools\node\node-v20.19.6-win-x64\node_modules\npm\node_modules\@npmcli\config\lib\definitions\index.js
-- C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\tools\node\node-v20.19.6-win-x64\node_modules\npm\bin\npx-cli.js
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
-    at Module._load (node:internal/modules/cjs/loader:1038:27)
-    at Module.require (node:internal/modules/cjs/loader:1289:19)
-    at require (node:internal/modules/helpers:182:18)
-    at Object.<anonymous> (C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\tools\node\node-v20.19.6-win-x64\node_modules\npm\node_modules\@npmcli\config\lib\type-defs.js:1:14)
-    at Module._compile (node:internal/modules/cjs/loader:1521:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-    at Module.load (node:internal/modules/cjs/loader:1266:32)
-    at Module._load (node:internal/modules/cjs/loader:1091:12)
-    at Module.require (node:internal/modules/cjs/loader:1289:19) {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: [
-    'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\tools\\node\\node-v20.19.6-win-x64\\node_modules\\npm\\node_modules\\@npmcli\\config\\lib\\type-defs.js',
-    'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\tools\\node\\node-v20.19.6-win-x64\\node_modules\\npm\\node_modules\\@npmcli\\config\\lib\\definitions\\definition.js',
-    'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\tools\\node\\node-v20.19.6-win-x64\\node_modules\\npm\\node_modules\\@npmcli\\config\\lib\\definitions\\definitions.js',
-    'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\tools\\node\\node-v20.19.6-win-x64\\node_modules\\npm\\node_modules\\@npmcli\\config\\lib\\definitions\\index.js',
-    'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\tools\\node\\node-v20.19.6-win-x64\\node_modules\\npm\\bin\\npx-cli.js'
-  ]
-}
-
-Node.js v20.19.6
