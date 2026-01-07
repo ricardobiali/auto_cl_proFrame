@@ -1,1 +1,6 @@
 python -m pip install --no-index --find-links .\backend\offline\wheels_win_cp313 -r .\backend\requirements.txt
+
+pyinstaller --onefile --noconfirm --clean `
+  --name auto_cl_backend `
+  --add-data "backend\core\user_data.csv;core" `
+  backend\run_backend.py
