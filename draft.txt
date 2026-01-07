@@ -2,5 +2,7 @@ pyinstaller --onefile --noconfirm --clean `
   --name auto_cl_backend `
   --paths backend `
   --hidden-import server.settings `
+  --hidden-import core.urls `
+  --hidden-import core.views `
   --add-data "backend\core\user_data.csv;core" `
   backend\run_backend.py
