@@ -4,3 +4,167 @@ pyinstaller --onefile --noconfirm --clean `
   --name auto_cl_backend `
   --add-data "backend\core\user_data.csv;core" `
   backend\run_backend.py
+
+
+  (venv) PS C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame> pyinstaller --onefile --noconfirm --clean `
+>>   --name auto_cl_backend `
+>>   --add-data "backend\core\user_data.csv;core" `
+>>   backend\run_backend.py
+255 INFO: PyInstaller: 6.17.0, contrib hooks: 2025.11
+255 INFO: Python: 3.14.0
+312 INFO: Platform: Windows-11-10.0.26100-SP0
+312 INFO: Python environment: C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv
+314 INFO: wrote C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\auto_cl_backend.spec
+321 INFO: Removing temporary files and cleaning cache in C:\Users\U33V\AppData\Local\pyinstaller
+334 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\U33V\\OneDrive - '
+ 'PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\venv\\Scripts\\pyinstaller.exe',
+ 'C:\\Program Files\\Python314\\python314.zip',
+ 'C:\\Program Files\\Python314\\DLLs',
+ 'C:\\Program Files\\Python314\\Lib',
+ 'C:\\Program Files\\Python314',
+ 'C:\\Users\\U33V\\OneDrive - '
+ 'PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\venv',
+ 'C:\\Users\\U33V\\OneDrive - '
+ 'PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\venv\\Lib\\site-packages',
+ 'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame']
+1108 INFO: Appending 'datas' from .spec
+1108 INFO: checking Analysis
+1109 INFO: Building Analysis because Analysis-00.toc is non existent
+1109 INFO: Looking for Python shared library...
+1109 INFO: Using Python shared library: C:\Program Files\Python314\python314.dll
+1109 INFO: Running Analysis Analysis-00.toc
+1109 INFO: Target bytecode optimization level: 0
+1109 INFO: Initializing module dependency graph...
+1112 INFO: Initializing module graph hook caches...
+1184 INFO: Analyzing modules for base_library.zip ...
+4933 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6045 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+7742 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+7800 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+20097 INFO: Caching module dependency graph...
+20128 INFO: Analyzing C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\backend\run_backend.py
+20134 INFO: Processing standard module hook 'hook-django.py' from 'C:\\Users\\U33V\\OneDrive - PETROBRAS\\Desktop\\python\\auto_cl_proFrame\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+26663 INFO: Django root directory C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\backend\server
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Scripts\pyinstaller.exe\__main__.py", line
+ 6, in <module>
+    sys.exit(_console_script_run())
+             ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\__main__.py", line 231, in _console_script_run
+    run()
+    ~~~^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\__main__.py", line 215, in run
+    run_build(pyi_config, spec_file, **vars(args))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\__main__.py", line 70, in run_build
+    PyInstaller.building.build_main.main(pyi_config, spec_file, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\building\build_main.py", line 1272, in main
+    build(specfile, distpath, workpath, clean_build)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\building\build_main.py", line 1210, in build
+    exec(code, spec_namespace)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\auto_cl_backend.spec", line 4, in <module>     
+    a = Analysis(
+        ['backend\\run_backend.py'],
+    ...<9 lines>...
+        optimize=0,
+    )
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\building\build_main.py", line 584, in __init__
+    self.__postinit__()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\building\datastruct.py", line 184, in __postinit__
+    self.assemble()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\building\build_main.py", line 716, in assemble
+    program_scripts.append(self.graph.add_script(script))
+                           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\depend\analysis.py", line 283, in add_script
+    self._top_script_node = super().add_script(pathname)
+                            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1194, in add_script
+    self._process_imports(n)
+    ~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2654, in _process_imports
+    target_modules = self._safe_import_hook(*import_info, **kwargs)
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\depend\analysis.py", line 477, in _safe_import_hook
+    ret_modules = super()._safe_import_hook(
+        target_module_partname, source_module, target_attr_names, level, edge_attr
+    )
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2103, in _safe_import_hook
+    target_modules = self.import_hook(
+        target_module_partname, source_module,
+        target_attr_names=None, level=level, edge_attr=edge_attr)
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1266, in import_hook
+    target_package, target_module_partname = self._find_head_package(
+                                             ~~~~~~~~~~~~~~~~~~~~~~~^
+        source_package, target_module_partname, level)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1445, in _find_head_package
+    target_package = self._safe_import_module(
+        target_module_headname, target_package_name, source_package)
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\depend\analysis.py", line 539, in _safe_import_module
+    return super()._safe_import_module(module_basename, module_name, parent_package)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1826, in _safe_import_module
+    self._process_imports(n)
+    ~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2654, in _process_imports
+    target_modules = self._safe_import_hook(*import_info, **kwargs)
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\depend\analysis.py", line 385, in _safe_import_hook
+    excluded_imports = self._find_all_excluded_imports(source_module.identifier)
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\depend\analysis.py", line 373, in _find_all_excluded_imports
+    excluded_imports.update(module_hook.excludedimports)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\depend\imphook.py", line 343, in __getattr__
+    self._load_hook_module()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\depend\imphook.py", line 422, in _load_hook_module
+    self._hook_module = importlib_load_source(self.hook_module_name, self.hook_filename)
+                        ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\compat.py", line 559, in importlib_load_source
+    mod_loader.exec_module(mod)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\hooks\hook-django.py", line 31, in <module>
+    settings_py_imports = django.django_dottedstring_imports(root_dir)
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\isolated\_parent.py", line 435, in wrapped
+    return call(function, *args, **kwargs)
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\isolated\_parent.py", line 404, in call
+    return isolated.call(function, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\isolated\_parent.py", line 334, in call
+    raise RuntimeError(f"Child process call to {function.__name__}() failed with:\n" + output)
+RuntimeError: Child process call to django_dottedstring_imports() failed with:
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\isolated\_child.py", line 63, in run_next_command
+    output = function(*args, **kwargs)
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\PyInstaller\utils\hooks\django.py", line 51, in django_dottedstring_imports
+    django.setup()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\django\__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\django\conf\__init__.py", line 75, in __getattr__
+    self._setup(name)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\django\conf\__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame\venv\Lib\site-packages\django\conf\__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "C:\Program Files\Python314\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'server'

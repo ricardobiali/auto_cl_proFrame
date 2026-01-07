@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['backend/run_backend.py'],
+    ['backend\\run_backend.py'],
     pathex=[],
     binaries=[],
-    datas=[('backend/core/user_data.csv', 'core')],
+    datas=[('backend\\core\\user_data.csv', 'core')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
