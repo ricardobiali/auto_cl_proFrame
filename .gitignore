@@ -5,3 +5,4 @@ backend/data/jobs/
 backend/data/jobs/*.json
 backend/data/requests_*.json
 dist
+tools
