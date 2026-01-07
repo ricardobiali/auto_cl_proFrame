@@ -5,3 +5,11 @@
   --hidden-import server.health `
   --add-data "backend\core\user_data.csv;core" `
   backend\run_backend.py
+
+
+  $nodeHome = (Resolve-Path ".\tools\node\node-v20*-win-x64").Path
+$env:PATH = "$nodeHome;$env:PATH"
+
+node -v
+npm -v
+npx -v
