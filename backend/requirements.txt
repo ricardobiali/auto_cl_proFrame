@@ -9,3 +9,5 @@ pyinstaller-hooks-contrib==2025.11
 python-dotenv==1.2.1
 setuptools==80.9.0
 sqlparse==0.5.5
+tzdata; sys_platform == "win32"
+pefile; sys_platform == "win32"
