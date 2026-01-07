@@ -1,3 +1,27 @@
 python -m pip uninstall -y django pyinstaller pyinstaller-hooks-contrib
 python -m pip install --no-index --find-links .\backend\offline\wheels_win_cp313 -r .\backend\requirements.txt
 pyinstaller --onefile --noconfirm --clean --name auto_cl_backend --add-data "backend\core\user_data.csv;core" backend\run_backend.py
+
+
+(venv) PS C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame> python -m pip uninstall -y django pyinstaller pyinstaller-hooks-contrib
+WARNING: Skipping django as it is not installed.
+WARNING: Skipping pyinstaller as it is not installed.
+WARNING: Skipping pyinstaller-hooks-contrib as it is not installed.
+(venv) PS C:\Users\U33V\OneDrive - PETROBRAS\Desktop\python\auto_cl_proFrame> python -m pip install --no-index --find-links .\backend\offline\wheels_win_cp313 -r .\backend\requirements.txt
+Looking in links: .\backend\offline\wheels_win_cp313
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\altgraph-0.17.5-py2.py3-none-any.whl (from -r .\backend\requirements.txt (line 1))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\asgiref-3.11.0-py3-none-any.whl (from -r .\backend\requirements.txt (line 2))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\django-6.0-py3-none-any.whl (from -r .\backend\requirements.txt (line 3))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\django_cors_headers-4.9.0-py3-none-any.whl (from -r .\backend\requirements.txt (line 4))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\macholib-1.16.4-py2.py3-none-any.whl (from -r .\backend\requirements.txt (line 5))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\packaging-25.0-py3-none-any.whl (from -r .\backend\requirements.txt (line 6))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\pyinstaller-6.17.0-py3-none-win_amd64.whl (from -r .\backend\requirements.txt (line 7))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\pyinstaller_hooks_contrib-2025.11-py3-none-any.whl (from -r .\backend\requirements.txt (line 8))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\python_dotenv-1.2.1-py3-none-any.whl (from -r .\backend\requirements.txt (line 9))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\setuptools-80.9.0-py3-none-any.whl (from -r .\backend\requirements.txt (line 10))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\sqlparse-0.5.5-py3-none-any.whl (from -r .\backend\requirements.txt (line 11))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\tzdata-2025.3-py2.py3-none-any.whl (from -r .\backend\requirements.txt (line 12))
+Processing c:\users\u33v\onedrive - petrobras\desktop\python\auto_cl_proframe\backend\offline\wheels_win_cp313\pefile-2024.8.26-py3-none-any.whl (from -r .\backend\requirements.txt (line 13))
+INFO: pip is looking at multiple versions of pyinstaller to determine which version is compatible with other requirements. This could take a while.
+ERROR: Could not find a version that satisfies the requirement pywin32-ctypes>=0.2.1; sys_platform == "win32" (from pyinstaller) (from versions: none)
+ERROR: No matching distribution found for pywin32-ctypes>=0.2.1; sys_platform == "win32"
